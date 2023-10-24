@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/css/javascript/js.js"></script>
+</head>
+<body>
+
+    
+    <!-------------NAVBAR--------------->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" target="_top"><img src="/Icons/beauty.png"></a></li>
+                <li><a href="#servicesAnc">Services</a></li>
+                <li><a href="#mastersAnc">Masters</a></li>
+                <li><a href="#aboutAnc" >About</a></li>
+                <li><a href="#" onclick="openLoginForm()">Login</a></li>
+                <li><a onclick="toggleDarkMode()"><img id="darkModeToggle" src="/Icons/darktheme.png"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<!-------------NameOfSite and Wallpaper--------------->
+<div class="nameofsite">
+    <h1>Opusto Gabboni</h1>
+</div>
+
+<!-------------Services H2--------------->
+<div class="nameservice">
+    <h2 id="servicesAnc">Services</h2>
+</div>
+
+
+
+<!------Modal For Login display:none css settings------>
+<div id="loginModal">
+    <div id="loginForm">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+        </form>
+        <button class="login">Login</button>
+        <button onclick="closeLoginForm()" class="close">Close</button>
+        <a href="#" onclick="openRegistrationForm()">Register</a>
+    </div>
+</div>
+
+
+<!------Modal For Registration display:none css settings ------>
+<div id="registrationModal">
+    <div id="registrationForm">
+        <h2>Register</h2>
+        <form>
+            <input type="text" id="name" name="name" placeholder="Name: ">
+            <input type="text" id="email" name="email" placeholder="Email: ">
+            <input type="password" id="password" name="password" placeholder="Password: ">
+        </form>
+        <button class="registration">Reg</button>
+        <button onclick="closeRegistrationForm()">Close</button>
+    </div>
+</div>
+
+
+
+<!-------------HAAAAAAAAAAAIIIIIIIIIIRRRRRRRRRR--------------->
+<div class="infoblock">
+    <div class="Card" onclick="openModalHair()">
+        <div class="card-content">
+            <div class="hair">
+                <h2>Hair</h2>
+                <ul>
+                    <li>Consultation with the client to determine the style.</li>
+                    <li>Hair preparation, including washing and, if necessary, chemical treatment.</li>
+                    <li>Haircut and hair shaping.</li>
+                    <li>Styling using tools and styling products.</li>
+                    <li>The final fixation of the style.</li>
+                    <li>Tips for care and completion of services.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="hairModal" class="modal">
+        <div class="modal-content">
+            <h2>Hair</h2>
+            
+            <div class="service-details">
+                <div class="service-image">
+                    <img src="/Img/hairmod.webp" alt="Hair Service Image">
+                </div>
+                <ul>
+                    <h2>Services</h2>
+                    <li>Consultation with the client to determine the style.</li>
+                    <li>Hair preparation, including washing and chemical treatment.</li>
+                    <li>Haircut and hair shaping.</li>
+                    <li>Styling using tools and styling products.</li>
+                    <li>The final fixation of the style.</li>
+                    <li>Tips for care and completion of services.</li>
+                </ul>
+            </div>
+
+            <button onclick="closeModalHair()">Close</button>
+        </div>
+    </div>
+
+<!-------------MAAAAAANIIIICCCCUUREEE--------------->
+    <div class="Card" onclick="openModalHairM()">
+        <div class="card-content">
+            <div class="manicure">
+                <h2>Manicure and Pedicure</h2>
+                <ul>
+                    <li>Consultation with the client to determine the style and preferences.</li>
+                    <li>Nail preparation: removing old nail polish, cleaning and trimming nails.</li>
+                    <li>Skin care (with pedicure): removal of keratinized skin, massage and moisturizing.</li>
+                    <li>Nail polish in the chosen color and design.</li>
+                    <li>Nail design: application of patterns and decorative elements.</li>
+                    <li>Tips for nail care after the procedure.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="manicureModal" class="modal">
+        <div class="modal-content">
+            <h2>Manicure-Pedicure</h2>
+            
+            <div class="service-details">
+                <div class="service-image">
+                    <img src="/Img/manicure.jpg" alt="Manicure">
+                </div>
+                <ul>
+                    <h2>Services</h2>
+                    <li>Consultation with the client to determine the style.</li>
+                    <li>Nail preparation: cleaning and trimming nails.</li>
+                    <li>Skin care (with pedicure):moisturizing.</li>
+                    <li>Nail polish in the chosen color and design.</li>
+                    <li>Nail design: application of patterns.</li>
+                    <li>Tips for nail care after the procedure.</li>
+                </ul>
+            </div>
+
+            <button onclick="closeModalHairM()">Close</button>
+        </div>
+    </div>
+
+
+<!-------------MAAAAAAKKKKEEEEEEUUUUUUPPPPPP--------------->
+    <div class="Card" onclick="openModalHairMa()">
+        <div class="card-content">
+            <div class="makeup">
+                <h2>Makeup</h2>
+                <ul>
+                    <li>Consultation with the client to desired makeup style and preferences.</li>
+                    <li>Prepping the skin: cleansing and applying a suitable base for makeup.</li>
+                    <li>Makeup application: including foundation lip gloss.</li>
+                    <li>Contouring and highlighting to enhance facial features.</li>
+                    <li>Eyebrow shaping and defining if requested.</li>
+                    <li>Finishing touches, such as setting spray to make the makeup long-lasting.</li>
+                    <li>Tips on makeup maintenance and removal.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="makeupModal" class="modal">
+        <div class="modal-content">
+            <h2>Makeup</h2>
+            
+            <div class="service-details">
+                <div class="service-image">
+                    <img src="/Img/modmakeup.jpg" alt="Makeup">
+                </div>
+                <ul>
+                    <h2>Services</h2>
+                    <li>Consultation with the client to determine the desired makeup style.</li>
+                    <li>Prepping the skin: and applying a suitable base for makeup.</li>
+                    <li>Makeup application: including lipstick or lip gloss.</li>
+                    <li>Contouring and highlighting to enhance facial features.</li>
+                    <li>Eyebrow shaping and defining if requested.</li>
+                    <li>Finishing touches.</li>
+                    <li>Tips on makeup maintenance and removal.</li>
+                </ul>
+            </div>
+
+            <button onclick="closeModalHairMa()">Close</button>
+        </div>
+    </div>
+
+
+<!-------------SSSSSSSPPPPPPPAAAAAAAAAA--------------->
+    <div class="Card" onclick="openModalHairSpa()">
+        <div class="card-content">
+            <div class="spa">
+                <h2>Spa</h2>
+                <ul>
+                    <li>Consultation with the client to understand their spa treatment preferences and requirements.</li>
+                    <li>Skin preparation: cleansing and exfoliation to prepare the skin for spa treatments.</li>
+                    <li>Various spa treatments: such as massages, facials, body scrubs, and body wraps, tailored to individual needs.</li>
+                    <li>Aromatherapy and relaxation techniques to enhance the spa experience.</li>
+                    <li>Hydration and rejuvenation treatments for the skin and body.</li>
+                    <li>Relaxation in a serene spa environment to promote well-being and stress relief.</li>
+                    <li>Guidance on post-spa care and well-being practices.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="spaModal" class="modal">
+        <div class="modal-content">
+            <h2>Spa</h2>
+            
+            <div class="service-details">
+                <div class="service-image">
+                    <img src="/Img/modSpa.jpg" alt="Spa">
+                </div>
+                <ul>
+                    <h2>Services</h2>
+                    <li>Consultation with the client to understand requirements.</li>
+                    <li>Skin preparation: cleansing to prepare the skin for spa treatments.</li>
+                    <li>Various spa treatments: such as massages, body wraps.</li>
+                    <li>Aromatherapy and relaxation techniques to enhance the spa.</li>
+                    <li>Hydration and treatments for the skin and body.</li>
+                    <li>Relaxation in a serene spa environment to promote stress relief.</li>
+                    <li>Guidance on care and well-being practices.</li>
+                </ul>
+            </div>
+
+            <button onclick="closeModalHairSpa()">Close</button>
+        </div>
+    </div>
+
+
+<!-------------MAAAAAASSSSSSSAAAAAAAAAAGGGEEEEEEEEE--------------->
+    <div class="Card" onclick="openModalHairMass()">
+        <div class="card-content">
+            <div class="massage">
+                <h2>Massage</h2>
+                <ul>
+                    <li>Consultation with the client to assess their massage preferences and specific needs.</li>
+                    <li>Preparation for the massage: ensuring a comfortable and peaceful environment for relaxation.</li>
+                    <li>Various massage techniques: including Swedish, deep tissue, hot stone, and more, tailored to individual requirements.</li>
+                    <li>Aromatherapy and soothing music to enhance the massage experience and relaxation.</li>
+                    <li>Stress relief and tension reduction through skilled manipulation of muscles and soft tissues.</li>
+                    <li>Post-massage relaxation and guidance on maintaining a sense of well-being and self-care practices.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="massModal" class="modal">
+    <div class="modal-content">
+        <h2>Massage</h2>
+        
+        <div class="service-details">
+            <div class="service-image">
+                <img src="/Img/modmassage.jpeg" alt="Massage">
+            </div>
+            <ul>
+                <h2>Services</h2>
+                <li>Consultation with the client to assess their massage.</li>
+                <li>Preparation for the massage: ensuring a comfortable.</li>
+                <li>Various massage techniques: including Swedish and more.</li>
+                <li>Aromatherapy and soothing music to enhance the massage.</li>
+                <li>Stress relief reduction through skilled manipulation.</li>
+                <li>Post-massage guidance on maintaining a sense of well-being.</li>
+            </ul>
+        </div>
+
+        <button onclick="closeModalHairMass()">Close</button>
+    </div>
+</div>
+
+
+
+<!-------------Masters H2--------------->
+<div class="nameMasters">
+    <h2 id="mastersAnc">Masters Female</h2>
+</div>
+
+
+
+
+<div class="masterblock">
+    <!-- Jenny - Makeup Artist -->
+    <div class="master">
+        <img src="/Img/jenny.jpg" alt="Jenny">
+        <h3>Jenny</h3>
+        <p>Makeup Artist</p>
+        <h3>Experience</h3>
+        <p>Jenny is a professional makeup artist with over 5 years of experience in creating stunning makeup looks for special occasions and events.</p>
+    </div>
+    <!-- Lisa - Hair Stylist -->
+    <div class="master">
+        <img src="/Img/lalisaworker.jpg" alt="Lalisa">
+        <h3>Lisa</h3>
+        <p>Hair Stylist</p>
+        <h3>Experience</h3>
+        <p>Lisa is an experienced hair stylist known for his creative haircuts, styles, and coloring techniques. He has been in the industry for over 8 years.</p>
+    </div>
+    <!-- Rose - Nail Technician -->
+    <div class="master">
+        <img src="/Img/rose.jpg" alt="Rose">
+        <h3>Rose</h3>
+        <p>Nail Technician</p>
+        <h3>Experience</h3>
+        <p>Rose is a skilled nail technician specializing in manicures and pedicures. She has been providing top-notch nail services for 7 years.</p>
+    </div>
+    <!-- Jisoo - Spa Master -->
+    <div class="master">
+        <img src="/Img/jisoo.jpg" alt="Jisoo">
+        <h3>Jisoo</h3>
+        <p>Spa Master</p>
+        <h3>Experience</h3>
+        <p>Jisoo is a skilled spa technician specializing in manicures and pedicures. She has been providing top-notch nail services for 10 years.</p>
+    </div>
+</div>
+
+
+<!-- Jisoo - Spa Master -->
+
+
+<div class="nameMasters">
+    <h2 id="mastersAnc">Masters Male</h2>
+</div>
+
+
+
+<div class="masterblock">
+    <!-- bts Jungkook - Barber -->
+    <div class="master">
+        <img src="/Img/jungkook.jpg" alt="Jungkook">
+        <h3>Jungkook</h3>
+        <p>Barber</p>
+        <h3>Experience</h3>
+        <p>Jungkook is a talented barber with 7 years of experience in men's grooming and hairstyles.</p>
+    </div>
+    <!-- bts Vi - Massage master -->
+    <div class="master">
+        <img src="/Img/vi.jpg" alt="Vi">
+        <h3>Vi</h3>
+        <p>Massage Therapist</p>
+        <h3>Experience</h3>
+        <p>Vi is an experienced massage therapist specializing in relaxation and wellness treatments.</p>
+    </div>
+    <!-- bts RM - Manicurist master -->
+    <div class="master">
+        <img src="/Img/rm.jpg" alt="RM">
+        <h3>RM</h3>
+        <p>Manicurist</p>
+        <h3>Experience</h3>
+        <p>RM is a skilled manicurist known for his expertise in nail care and manicures.</p>
+    </div>
+    <!-- bts RM - Spa master -->
+    <div class="master">
+        <img src="/Img/jimin.webp" alt="Jimin">
+        <h3>Jimin</h3>
+        <p>Spa Specialist</p>
+        <h3>Experience</h3>
+        <p>Jimin is a spa specialist with a focus on relaxation and rejuvenation.</p>
+    </div>
+</div>
+
+
+<!-------------- Networks ---------------->
+<div class="aboutname">
+    <h2 id="aboutAnc">Networks</h2>
+</div>
+
+
+<!-------------- Networks---------------->
+<div id="networks">
+<div class="columnWrapper">
+    <!-- First column -->
+    <div class="column" id="instagramm" onclick="openLink()">
+        <h4>Instagramm</h4>
+        <img src="/Icons/icons8-instagram-50.png">
+        <div class="address">
+            Click on the card and go to <br>
+            our instagram<br>
+            to check out our posts<br>
+        </div>
+    </div>
+
+    <!-- Second column -->
+    <div class="column" id="twitter" onclick="openLink1()">
+        <h4>Twitter</h4>
+        <img src="/Icons/icons8-twitter-50.png">
+        <div class="address">
+            Click on the card and go to <br>
+            our twitter<br>
+            to check out our twits<br>
+        </div>
+    </div>
+
+    <!-- Third column -->
+    <div class="column" id="telegram" onclick="openLink2()">
+        <h4>Telegram</h4>
+        <img src="/Icons/icons8-telegram-50.png">
+        <div class="address">
+            Click on the card and go to <br>
+            our telegram channel<br>
+            to check out our news<br>
+        </div>
+    </div>
+
+    <!-- Fourth column -->
+    <div class="column" id="watsapp" onclick="openLink3()">
+        <h4>Whatsapp</h4>
+        <img src="/Icons/icons8-whatsapp-50.png">
+        <div class="address">
+            Click on the card and go to <br>
+            our whatsapp group<br>
+            to check out our posts<br>
+        </div>
+    </div>
+
+    <!-- 5 column -->
+    <div class="column" id="tiktok" onclick="openLink4()">
+      <h4>TikTok</h4>
+      <img src="/Icons/icons8-tiktok-50.png">
+      <div class="address">
+        Click on the card and go to <br>
+        our tiktok account<br>
+        to check out our video<br>
+      </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<!-------------- About ---------------->
+<div class="aboutname">
+        <h2 id="aboutAnc">Address</h2>
+    </div>
+
+
+<!-------------- Foooteeeer---------------->
+<footer id="footer">
+    <div class="columnWrapper">
+        <!-- First column -->
+        <div class="column1">
+            <h4>London</h4>
+            <div class="address">
+                10221b Orange St,Piccadilly<br>
+                London Sw1y 4uh<br>
+                United Kingdom<br>
+                44(20)7939-7140<br>
+                <a href="#">Directions</a><br>
+                <a href="#" target="_top">Contact</a>
+            </div>
+        </div>
+
+        <!-- Second column -->
+        <div class="column1">
+            <h4>New York</h4>
+            <div class="address">
+                Lever House<br>
+                390 Park Avenue<br>
+                New York,NY 10022<br>
+                United States<br>
+                <a href="#">Directions</a><br>
+                <a href="#" target="_top">Contact</a>
+            </div>
+        </div>
+
+        <!-- Third column -->
+        <div class="column1">
+            <h4>Paris</h4>
+            <div class="address">
+                220 Ave des Champs-Elysees<br>
+                75008 Paris<br>
+                France<br>
+                333(1)60-14-77-77<br>
+                
+                <a href="#">Directions</a><br>
+                <a href="#" target="_top">Contact</a>
+            </div>
+        </div>
+
+        <!-- Fourth column -->
+        <div class="column1">
+            <h4>Singapore</h4>
+            <div class="address">
+                5th Floor Hoon-Foi Building<br>
+                101 Queen St<br>
+                Financial District<br>
+                Singapore 19452<br>
+                Singapore<br>
+                65(6)335-6700<br>
+                <a href="#">Directions</a><br>
+                <a href="#" target="_top">Contact</a>
+            </div>
+        </div>
+        <div class="column1">
+          <h4>Astana</h4>
+          <div class="address">
+              5th Floor Baiterek Building<br>
+              101 Nazarbayev St<br>
+              Financial District<br>
+              Astana 19452<br>
+              Astana<br>
+              108(6)335-6777<br>
+              <a href="#">Directions</a><br>
+              <a href="#" target="_top">Contact</a>
+          </div>
+      </div>
+    </div>
+</footer>
+</body>
+</html>
